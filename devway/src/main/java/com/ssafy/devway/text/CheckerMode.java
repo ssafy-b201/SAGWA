@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7e09df723ded669c6795f5488e1861bd68f8aabb498d31a7f33f2e6880818301
-size 764
+package com.ssafy.devway.text;
+
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@RequiredArgsConstructor
+public enum CheckerMode {
+    ALLOWED_ALL(1),
+    ALLOWED_ENGLISH_LOWERCASE(2),
+    ALLOWED_ENGLISH_UPPERCASE(3),
+    ALLOWED_ENGLISH_ALL(4),
+    ALLOWED_KOREAN(5),
+    ALLOWED_BLANK(6),
+    ALLOWED_SPECIAL_CHARACTER(7),
+    DENIED_SPECIAL_CHARACTER(8),
+    DENIED_CHARACTER(9);
+
+    public final int textMode;
+}
