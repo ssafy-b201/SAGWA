@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:af1b40cc5a0e2040a17af4df7798b32d08142026b1dbd85928b6be59119a374f
-size 541
+package com.ssafy.devway;
+
+import com.ssafy.devway.block.block.Block;
+import com.ssafy.devway.text.CheckerMode;
+import com.ssafy.devway.text.TextBlock;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DevwayApplication {
+
+  public static void main(String[] args) {
+    SpringApplication.run(DevwayApplication.class, args);}
+}
