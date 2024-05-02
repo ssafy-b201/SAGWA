@@ -1,11 +1,3 @@
-package com.ssafy.devway.image;
-
-import com.ssafy.devway.block.element.BlockElement;
-
-public class ImageBlock implements BlockElement {
-
-    @Override
-    public String getName() {
-        return null;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:39ed180f35244b224e95c7ba223ddb79d862bfd46f8fac22d3aa5edc354d7c44
+size 2653
