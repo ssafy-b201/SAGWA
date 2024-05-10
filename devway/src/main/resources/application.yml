@@ -1,16 +1,3 @@
-server:
-  port: 8070
-
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://k10b201.p.ssafy.io:3307/sagwa
-    username: root
-    password: devway201
-  jpa:
-    hibernate:
-      ddl-auto: update
-  servlet:
-    multipart:
-      max-file-size: 10MB
-      max-request-size: 10MB
+version https://git-lfs.github.com/spec/v1
+oid sha256:dbc013026fc6223df7f5d3ec107e3a0123f332a1eb8b64f1cdbee46043f595c4
+size 614
