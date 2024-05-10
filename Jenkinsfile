@@ -16,7 +16,7 @@ pipeline {
 						withCredentials([usernamePassword(credentialsId: 'wns1915_sagwa', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD')]) {
 							sh '''
 							ENCODED_USERNAME=$(echo $GIT_USERNAME | sed 's/@/%40/g')
-							cd /home/ubuntu/oringe
+							cd /home/ubuntu/apple
 							git pull https://$ENCODED_USERNAME:$GIT_PASSWORD@lab.ssafy.com/ztjdwnz/apple.git release
 							'''
 						}
