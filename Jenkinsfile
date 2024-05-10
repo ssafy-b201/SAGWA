@@ -7,13 +7,13 @@ pipeline {
     stages {                                            
         stage('Checkout') {
             steps {
-                git branch: 'release', credentialsId: 'wns1915', url: 'https://lab.ssafy.com/ztjdwnz/apple.git' // GitLab 리포지토리
+                git branch: 'release', credentialsId: 'wns1915_sagwa', url: 'https://lab.ssafy.com/ztjdwnz/apple.git' // GitLab 리포지토리
             }
         }
 		stage('Update Local Repository') {
             steps {
                 script {
-						withCredentials([usernamePassword(credentialsId: 'wns1915', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD')]) {
+						withCredentials([usernamePassword(credentialsId: 'wns1915_sagwa', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD')]) {
 							sh '''
 							ENCODED_USERNAME=$(echo $GIT_USERNAME | sed 's/@/%40/g')
 							cd /home/ubuntu/oringe
