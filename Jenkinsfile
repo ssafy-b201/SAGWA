@@ -2,12 +2,12 @@ pipeline {
     agent any
     environment {
         DOCKER_COMPOSE_VERSION = '1.25.0' // 사용할 Docker Compose의 버전
-        GITLAB_TOKEN = credentials('wns1915') // Jenkins에 저장된 GitLab Token의 ID
+        GITLAB_TOKEN = credentials('wns1915_sagwa') // Jenkins에 저장된 GitLab Token의 ID
     }
-    stages {
+    stages {                                            
         stage('Checkout') {
             steps {
-                git branch: 'release', credentialsId: 'wns1915', url: 'https://lab.ssafy.com/wns1915/oringe.git' // GitLab 리포지토리
+                git branch: 'release', credentialsId: 'wns1915', url: 'https://lab.ssafy.com/ztjdwnz/apple.git' // GitLab 리포지토리
             }
         }
 		stage('Update Local Repository') {
@@ -17,7 +17,7 @@ pipeline {
 							sh '''
 							ENCODED_USERNAME=$(echo $GIT_USERNAME | sed 's/@/%40/g')
 							cd /home/ubuntu/oringe
-							git pull https://$ENCODED_USERNAME:$GIT_PASSWORD@lab.ssafy.com/wns1915/oringe.git release
+							git pull https://$ENCODED_USERNAME:$GIT_PASSWORD@lab.ssafy.com/ztjdwnz/apple.git release
 							'''
 						}
                 }
@@ -26,8 +26,8 @@ pipeline {
         stage('Build Docker Images') {
             steps {
                 script {
-                    sh 'docker-compose -f /home/ubuntu/oringe/devway/docker-compose.yml build --no-cache app'
-                    sh 'docker-compose -f /home/ubuntu/oringe/devway/docker-compose.yml up -d app'
+                    sh 'docker-compose -f /home/ubuntu/apple/devway/docker-compose.yml build --no-cache app_sagwa'
+                    sh 'docker-compose -f /home/ubuntu/apple/devway/docker-compose.yml up -d app_sagwa'
                 }
             }
         }
