@@ -1,27 +1,13 @@
-#spring:
-#  datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: ${MYSQL_DATASOURCE_URL}
-#    username: ${MYSQL_DATASOURCE_USERNAME}
-#    password: ${MYSQL_DATASOURCE_PASSWORD}
+server:
+  port: 8070
 
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://k10b201.p.ssafy.io:3307/sagwa
+    username: root
+    password: devway201
+  jpa:
+    hibernate:
+      ddl-auto: update
 
-#logging:
-#  level:
-#    org:
-#      springframework:
-#        web.client.RestTemplate: DEBUG
-#        http: DEBUG
-#
-#---
-#spring:
-#  profiles:
-#    active: prods
-#---
-#spring:
-#  profiles:
-#    active: dev
-#---
-#spring:
-#  profiles:
-#    active: local
