@@ -1,13 +1,3 @@
-server:
-  port: 8070
-
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://k10b201.p.ssafy.io:3307/sagwa
-    username: root
-    password: devway201
-  jpa:
-    hibernate:
-      ddl-auto: update
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:d4515d97744567272e7db6bb1b52e835ed971f4c6218c76bd23465788905aa53
+size 752
