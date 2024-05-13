@@ -3,10 +3,10 @@ package com.ssafy.devway.domain.member.dto.request;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 
-@Data
-@AllArgsConstructor
 @Builder
+@Getter
 public class MemberReqDto {
-    private String email;
+    String email;
 }
