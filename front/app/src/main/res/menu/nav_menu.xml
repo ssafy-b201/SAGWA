@@ -12,7 +12,7 @@
         android:icon="@drawable/apple_icon" />
 
     <item
-        android:id="@+id/menu_call"
+        android:id="@+id/menu_callList"
         android:title="전화"
         android:icon="@drawable/apple_icon" />
 

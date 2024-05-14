@@ -1,9 +1,3 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Sagwa" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
-
-    <style name="Theme.Sagwa" parent="Base.Theme.Sagwa" />
-</resources>
+version https://git-lfs.github.com/spec/v1
+oid sha256:cdd46eb3d043e2780431a5a9f76ad51765106da780cec7c165c19f7820c2380d
+size 791
