@@ -1,14 +1,3 @@
-package com.ssafy.devway.domain.phoneBook.repository;
-
-import com.ssafy.devway.domain.phoneBook.dto.response.PhoneBookResDTO;
-import com.ssafy.devway.domain.phoneBook.entity.PhoneBook;
-import java.util.List;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface PhoneBookRepository extends JpaRepository<PhoneBook, Long> {
-
-    List<PhoneBook> findByMember_MemberId(Long memberId);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ccbd0b8d46a8cc9d2978210af2593e7d21716b923ba31cedfd9aaf48dd6169c
+size 533
