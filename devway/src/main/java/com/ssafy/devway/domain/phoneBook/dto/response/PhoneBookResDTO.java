@@ -8,7 +8,7 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class PhoneBookResDTO {
-
+    private Long id;
     private String number;
     private String name;
 }
