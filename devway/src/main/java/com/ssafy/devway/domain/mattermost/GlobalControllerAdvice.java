@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b421a94133b0a00bde6a85925082223a5802872462b3a0e6cab53ab737298bd5
-size 1263
+package com.ssafy.devway.domain.mattermost;
+
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+import java.util.Enumeration;
+
+@ControllerAdvice
+@RequiredArgsConstructor
+public class GlobalControllerAdvice {
+    private final NotificationManager notificationManager;
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity exceptionTest(Exception e, HttpServletRequest req) {
+        e.printStackTrace();
+        notificationManager.sendNotification(e, req.getRequestURI(), getParams(req));
+
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    private String getParams(HttpServletRequest req) {
+        StringBuilder params = new StringBuilder();
+        Enumeration<String> keys = req.getParameterNames();
+        while (keys.hasMoreElements()) {
+            String key = keys.nextElement();
+            params.append("- ").append(key).append(" : ").append(req.getParameter(key)).append('\n');
+        }
+
+        return params.toString();
+    }
+}

@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3158dc26c6a5f0c65f63cab9abe654b11e01d6e2f858af045db384b020e1806e
-size 889
+package com.ssafy.devway.global.api;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.lang.reflect.Type;
+import org.springframework.http.MediaType;
+import org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MultipartJackson2HttpMessageConverter extends AbstractJackson2HttpMessageConverter {
+
+    public MultipartJackson2HttpMessageConverter(ObjectMapper objectMapper) {
+        super(objectMapper, MediaType.APPLICATION_OCTET_STREAM);
+    }
+
+    @Override
+    public boolean canWrite(Class<?> clazz, MediaType mediaType) {
+        return false;
+    }
+
+    @Override
+    public boolean canWrite(Type type, Class<?> clazz, MediaType mediaType) {
+        return false;
+    }
+
+    @Override
+    protected boolean canWrite(MediaType mediaType) {
+        return false;
+    }
+
+}

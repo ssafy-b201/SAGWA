@@ -1,3 +1,199 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:46cb951d267f711ef84417dd698f0be4164e8e46e7f5d51a373e64e5a241917f
-size 8499
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/diaryDetailActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/writeBack"
+    tools:context=".activity.DiaryDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/diaryDetail_allLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/diaryDetail_footerLayout"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <!-- 헤더 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/diaryDetail_headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/point"
+            android:orientation="vertical"
+            android:padding="35dp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/diaryDetail_header_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kotrahope"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:layout_constraintTop_toTopOf="@id/diaryDetail_headerLayout" />
+
+            <TextView
+                android:id="@+id/diaryDetail_header_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kotrahope"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                app:layout_constraintTop_toBottomOf="@id/diaryDetail_header_year" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/diaryDetail_contentLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="35dp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/diaryDetail_headerLayout">
+
+                </LinearLayout>
+
+                <!-- 버튼 -->
+                <LinearLayout
+                    android:id="@+id/diaryDetail_buttonLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintBottom_toTopOf="@id/diaryDetail_footerLayout"
+                    app:layout_constraintTop_toBottomOf="@id/diaryDetail_allLayout"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/diaryDetail_delete_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/button_border_point"
+                        android:fontFamily="@font/kotrahope"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="25dp"
+                        android:paddingBottom="10dp"
+                        android:text="삭제"
+                        android:textColor="@color/point"
+                        android:textSize="22sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- 하단바 -->
+    <LinearLayout
+        android:id="@+id/diaryDetail_footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="-1dp"
+        android:orientation="horizontal"
+        android:padding="30dp"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/diaryDetail_footer_calendarLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp">
+
+            <ImageView
+                android:id="@+id/diaryDetail_footer_calendar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/calendar_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/kotrahope"
+                android:text="달력"
+                app:layout_constraintEnd_toEndOf="@id/diaryDetail_footer_calendar"
+                app:layout_constraintStart_toStartOf="@id/diaryDetail_footer_calendar"
+                app:layout_constraintTop_toBottomOf="@id/diaryDetail_footer_calendar" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/diaryDetail_footer_writeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/diaryDetail_footer_write"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/write_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/kotrahope"
+                android:text="오늘의 일기"
+                app:layout_constraintStart_toStartOf="@id/diaryDetail_footer_writeLayout"
+                app:layout_constraintTop_toBottomOf="@id/diaryDetail_footer_write" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/diaryDetail_footer_callListLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp">
+
+            <ImageView
+                android:id="@+id/diaryDetail_footer_callList"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/call_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/kotrahope"
+                android:text="전화록"
+                app:layout_constraintEnd_toEndOf="@id/diaryDetail_footer_callList"
+                app:layout_constraintStart_toStartOf="@id/diaryDetail_footer_callList"
+                app:layout_constraintTop_toBottomOf="@id/diaryDetail_footer_callList" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

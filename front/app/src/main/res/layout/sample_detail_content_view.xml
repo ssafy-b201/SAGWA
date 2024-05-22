@@ -1,3 +1,61 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:89962c1aee97d2e1b823a61c51bb3f301d4407ff0a0f264bda494994ef25aed9
-size 2425
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/detailContent_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kotrahope"
+        android:textColor="@color/point"
+        android:textSize="35sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/detailContent_weatherStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/kotrahope"
+        android:text="날씨 : "
+        android:textColor="@color/black"
+        android:textSize="27sp"
+        app:layout_constraintTop_toBottomOf="@id/detailContent_title"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/detailContent_weather"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/calendar_logo"
+        app:layout_constraintStart_toEndOf="@id/detailContent_weatherStr"
+        app:layout_constraintTop_toBottomOf="@id/detailContent_title"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/detailContent_img"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@id/detailContent_weatherStr"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/detailContent_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/kotrahope"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        app:layout_constraintTop_toBottomOf="@id/detailContent_img"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

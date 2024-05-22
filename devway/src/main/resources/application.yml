@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b56ce88bd237fa60d37edcd426d8ff8e77cfa353d8a6fa055c3858de0524b7a3
-size 760
+server:
+  port: 8070
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://k10b201.p.ssafy.io:3307/sagwa
+    username: root
+    password: devway201
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    properties:
+      hibernate:
+        format_sql: true
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+notification:
+  mattermost:
+    enabled: true
+    webhook-url: https://meeting.ssafy.com/hooks/kx5neubhrp859kje4humgkdima
+    channel:
+
+api:
+  weather:
+    key: 8f8b8897bbd05165cb3bd12186e06080
+
+img:
+  path:
+    db: "https://k10b201.p.ssafy.io/sagwa_static/"
+    user: "/app/static/"

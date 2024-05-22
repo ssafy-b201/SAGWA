@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3a248a9faf1596c21e95f0969d15989986c23f8a14cad718d094eff5ec56ce4f
-size 679
+version: '3.7'
+
+services:
+  app_sagwa:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8070:8070"
+    environment:
+      - TZ=Asia/Seoul
+    volumes:
+      - /home/ubuntu/apple/devway/src/main/resources/static:/app/static
+    networks:
+      - devway_network
+
+  mysql_sagwa:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: sagwa
+      MYSQL_USER: sagwa
+      MYSQL_PASSWORD: devway201
+      MYSQL_ROOT_PASSWORD: devway201
+      TZ: Asia/Seoul
+    volumes:
+      - mysql_data_sagwa:/var/lib/mysql
+    ports:
+      - "3307:3306"
+    networks:
+      - devway_network
+
+volumes:
+  mysql_data_sagwa:
+
+networks:
+  devway_network:
+    external: true

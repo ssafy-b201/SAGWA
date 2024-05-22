@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:83c7640c5f57a71020eb3ed8bfdcc90d127e4d7ba39b6398f1a0434cb6e61f8d
-size 976
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="customTextViewFontStyle" parent="@android:style/Widget.DeviceDefault.TextView">
+        <item name="android:fontFamily">@font/kotrahope</item>
+    </style>
+
+    <style name="customButtonFontStyle" parent="@android:style/Widget.DeviceDefault.Button.Borderless">
+        <item name="android:fontFamily">@font/kotrahope</item>
+    </style>
+
+    <style name="customEditTextFontStyle" parent="@android:style/Widget.DeviceDefault.EditText">
+        <item name="android:fontFamily">@font/kotrahope</item>
+    </style>
+
+    <style name="customRadioButtonFontStyle" parent="@android:style/Widget.DeviceDefault.CompoundButton.RadioButton">
+        <item name="android:fontFamily">@font/kotrahope</item>
+    </style>
+
+    <style name="customCheckboxFontStyle" parent="@android:style/Widget.DeviceDefault.CompoundButton.CheckBox">
+        <item name="android:fontFamily">@font/kotrahope</item>
+    </style>
+
+</resources>

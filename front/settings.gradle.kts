@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:531ae28a1a2aa4c3f62ea897d7b55d88b4275fc23e1ead00bb7d863cb01cad75
-size 530
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "sagwa"
+include(":app")
+ 

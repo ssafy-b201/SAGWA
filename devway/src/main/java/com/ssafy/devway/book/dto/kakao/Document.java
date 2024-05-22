@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:edf1b39db33efb0dde94acdf6b1c43a16d391dd198261a2bdd4a969a19e8e601
-size 549
+package com.ssafy.devway.book.dto.kakao;
+
+import java.util.ArrayList;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Getter
+@NoArgsConstructor
+@ToString
+public class Document {
+
+    private String[] authors;
+    private String contents;
+    private String datetime;
+    private String isbn;
+    private int price;
+    private String publisher;
+    private int sale_price;
+    private String status;
+    private String thumbnail;
+    private String title;
+    private String[] translators;
+    private String url;
+}

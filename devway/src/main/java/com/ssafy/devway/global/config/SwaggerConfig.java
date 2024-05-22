@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f625b668010952f8c879466c02524cab288d2af3c219bf5d62daaf6394636b61
-size 661
+package com.ssafy.devway.global.config;
+
+import io.swagger.v3.oas.models.Components;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Info;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SwaggerConfig {
+
+    @Bean
+    public OpenAPI openAPI() {
+        return new OpenAPI()
+            .components(new Components())
+            .info(apiInfo());
+    }
+
+    private Info apiInfo() {
+        return new Info()
+            .title("사랑하는 사람들과")
+            .description("SAGWA Swagger")
+            .version("1.0.0");
+    }
+}

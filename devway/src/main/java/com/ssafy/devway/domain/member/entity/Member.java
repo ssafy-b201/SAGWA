@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cc8bde0ea4702880afb1497b4dd897f813fcb0ccccfd10c2632cf1aa0bbe73e5
-size 681
+package com.ssafy.devway.domain.member.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Entity
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+@Builder
+@ToString
+public class Member {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long memberId;
+
+    @NotNull
+    private String memberEmail;
+
+}
+

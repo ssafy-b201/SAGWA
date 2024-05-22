@@ -1,3 +1,79 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aa2a51eec967bc9a4ab3ef82d13694fe00f3e681111c37d3bc1238fcb6daa989
-size 2917
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_lis"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/add_box"
+    android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기록하고 싶은 번호를 등록하세요"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/kotrahope"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="통화할 대상의 번호를 입력하세요"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/kotrahope"/>
+
+    <EditText
+        android:id="@+id/call_add_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/border_box"
+        android:inputType="number"
+        android:textSize="20sp"
+        android:fontFamily="@font/kotrahope"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="통화할 대상의 이름을 지정하세요."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/kotrahope"/>
+
+    <EditText
+        android:id="@+id/call_add_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        android:background="@drawable/border_box"
+        android:maxLength="20"
+        android:hint="최대 20자"
+        android:textSize="20sp"
+        android:fontFamily="@font/kotrahope"/>
+
+    <TextView
+        android:id="@+id/call_add_real"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@drawable/circle_white"
+        android:backgroundTint="@color/point"
+        android:elevation="3dp"
+        android:padding="10dp"
+        android:text="번호 추가"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/kotrahope"/>
+
+</LinearLayout>

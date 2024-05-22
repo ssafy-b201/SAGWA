@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8932442ba61ebd56f5fd2df54c5ccda0b662ceaca83cb4782e22629a14e7e4fe
-size 721
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="8dp" />
+            <solid android:color="#FFFFFF" />
+            <stroke android:width="1dp" android:color="@color/point" />
+        </shape>
+    </item>
+
+    <item
+        android:id="@android:id/progress"
+        android:bottom="1dp"
+        android:left="1dp"
+        android:right="1dp"
+        android:top="1dp">
+
+        <scale android:scaleWidth="100%">
+            <shape>
+                <corners android:radius="8dp" />
+                <solid android:color="@color/point" />
+            </shape>
+        </scale>
+    </item>
+</layer-list>

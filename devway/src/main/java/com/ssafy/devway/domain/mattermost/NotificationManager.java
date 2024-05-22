@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c07a9b95dce42bd515e4e13540bb7dd04acbc0191ee300759a2c57ddf4c08284
-size 559
+package com.ssafy.devway.domain.mattermost;
+
+import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
+@Component
+@RequiredArgsConstructor
+public class NotificationManager {
+    private final MatterMostSender mmSender;
+    private Logger log = LoggerFactory.getLogger(NotificationManager.class);
+
+    public void sendNotification(Exception e, String uri, String params) {
+        log.info("#### SEND Notification");
+        mmSender.sendMessage(e, uri, params);
+    }
+
+}
