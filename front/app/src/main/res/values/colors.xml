@@ -7,5 +7,7 @@
     <color name="green">#38CC50</color>
     <color name="gray">#8c8c8c</color>
     <color name="lightGray">#dbdbdb</color>
+    <color name="spinner">#FFFEF7</color>
+    <color name="spinnerStroke">#C2C2C2</color>
     <color name="writeBack">#FFFEF5</color>
 </resources>
